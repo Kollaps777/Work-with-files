@@ -41,6 +41,7 @@ def read_cook_book(file_path: str) -> Dict[str, List[Dict[str, Union[str, int]]]
                         'measure': measure
                     })
                 cook_book[dish_name] = ingredients
+                file.readline()
     except FileNotFoundError:
         raise FileNotFoundError(f"Файл '{file_path}' не найден.")
     except Exception as e:
